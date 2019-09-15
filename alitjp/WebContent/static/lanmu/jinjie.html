@@ -1,0 +1,1308 @@
+
+
+
+<!doctype html>
+<html>
+<head>
+
+
+
+
+
+ 
+
+<meta name="keywords" content="cms,java cms,开源cms,国产cms,SpringMVC CMS,tjpcms,最懂你的cms"/>
+<meta name="description" content="tjpcms是一套基于java的cms解决方案，开源免费。其独有的实时配置增删改查的功能，是其区别于同类cms的最大特点，也是最大优势，极大减少了重复劳动。懂jsp即可实现快速建站、静态化等，学习成本极低。文档齐全，持续更新，有需要的下载使用吧！"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<meta http-equiv="pragma" content="no-cache"/>
+<meta http-equiv="cache-control" content="no-cache"/>
+<meta http-equiv="expires" content="0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="renderer" content="webkit"/>
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="windows-Target" contect="_top"/>
+
+
+	
+	   
+	
+	   
+	
+	   
+	
+	
+		
+	
+
+
+
+
+<title>tjpcms - 教程 - 图文教程 - 进阶应用</title>
+
+<style>
+	.sycontent{padding-top:0 !important}
+	.list{width: 100%;max-width: 100%;border-collapse: collapse;border-spacing: 0;}
+	.list th {
+	    vertical-align: bottom;text-align: center;
+	    padding: 10px;font-size: 15px;
+	    background-color: #5F9EDF; color: #fff;
+	}
+	.list td {
+	    padding: 8px;text-align: center;
+	    vertical-align: top;border-right: 1px solid #ccc;font-size: 13px;
+	}
+	.list a{color: #428bca !important;text-decoration: none;}
+	.list a:hover{color:#2a6496 !important}
+	.outtbl{-webkit-border-radius: 6px;overflow: hidden;
+	-moz-border-radius: 6px;width: 90%;margin: 0 auto;
+	border-radius: 6px;;border: 1px solid #ccc;margin-bottom: 10px;margin-top: 20px;}
+	.shua{margin-bottom: 15px;    
+		background-image: -moz-linear-gradient(#fff 0%, #f8f8f8 100%);
+		background-image: -o-linear-gradient(#fff 0%, #f8f8f8 100%);
+		background-image: -webkit-linear-gradient(#fff 0%, #f8f8f8 100%);
+		background-image: linear-gradient(#fff 0%, #f8f8f8 100%);
+	    background-repeat: repeat-x;    background-color: #f8f8f8;
+    	color: #5e5e5e;    border: 1px solid #e7e7e7;
+	    border-radius: 4px;width: 90%;margin: 0 auto;
+	    -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.075);
+	    box-shadow: inset 0 1px 0 rgba(255,255,255,.15),0 1px 5px rgba(0,0,0,.075);margin-top: 40px !important;
+	}
+	.huac{padding: 15px;text-align: justify;font-size: 14px;text-indent: 2em;line-height: 1.5;}
+</style>
+
+</head>
+<body>
+	
+
+
+
+<link rel="stylesheet" href="/alitjp/css/index.css">
+<script type="text/javascript" src="/alitjp/js/jquery.js"></script>
+<script type="text/javascript" src="/alitjp/js/cmn.js"></script>
+<script type="text/javascript" src="/alitjp/js/template.js"></script>
+
+<style>
+body{
+	background: url("data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QPiaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcFJpZ2h0cz0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3JpZ2h0cy8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBSaWdodHM6TWFya2VkPSJGYWxzZSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6N2FiY2EzMTQtYWQ5OS0xMWUzLWIxNDUtODE4MzNlYWQ1ZTlkIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkVEQzZDMzlGMTM0OTExRTRCMTIwRDEzMjFDMEYxNUNBIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkVEQzZDMzlFMTM0OTExRTRCMTIwRDEzMjFDMEYxNUNBIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzJDOUFBRTIzODEzRTQxMUI0MThBMTQwRkMwMEM3QTAiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo3YWJjYTMxNC1hZDk5LTExZTMtYjE0NS04MTgzM2VhZDVlOWQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgICAgICAgICAgIDAwMDAwMDAwMDAQEBAQEBAQIBAQICAgECAgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwP/wAARCAAGAAYDAREAAhEBAxEB/8QATgABAAAAAAAAAAAAAAAAAAAACgEBAAAAAAAAAAAAAAAAAAAAABAAAwEBAAAAAAAAAAAAAAAAAQIDBQQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/AHoSr0HnsTHUBGX0uA/NpChoM3FZURW2noeo0dgqhlqarQCiutKVD//Z");
+}
+a:hover{color: #09c}
+.sycontent{
+	width:998px;margin: 0 auto;padding:  0;border: 1px solid rgb(189,215,242);-webkit-border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	border-radius: 0 0 4px 4px;
+}
+.head{
+	width: 1000px;margin: 0 auto;position: relative;
+}
+.topbar {
+	height: 28px;margin: 0 auto;text-indent: 1px;
+    width: 100%;color: #828282;font-size: 12px;line-height: 27px;
+}
+.banner{
+	height: 80px;line-height: 80px;margin-left: 6px;position: relative;
+}
+.icon-peach:before{font-size: 60px;}
+.ring-hover {-webkit-animation: 1s ease;-moz-animation: 1s ease;-ms-animation: 1s ease;animation: 1s ease;}
+.ring-hover:hover {-webkit-animation-name: a-ring;-moz-animation-name: a-ring;-ms-animation-name: a-ring;animation-name: a-ring;}
+@-webkit-keyframes a-ring {0% {-webkit-transform: scale(1);}10%,20% {-webkit-transform: scale(0.9) rotate(-3deg);}30%,50%,70%,90% 
+{-webkit-transform: scale(1.1) rotate(3deg);}40%,60%,80% {-webkit-transform: scale(1.1) rotate(-3deg);}100% {-webkit-transform: scale(1) rotate(0);}}
+@-moz-keyframes a-ring {0% {-moz-transform: scale(1);}10%,20% {-moz-transform: scale(0.9) rotate(-3deg);}30%,50%,70%,90% {-moz-transform: scale(1.1) 
+rotate(3deg);}40%,60%,80% {-moz-transform: scale(1.1) rotate(-3deg);}100% {-moz-transform: scale(1) rotate(0);}}
+@-ms-keyframes a-ring {0% {-ms-transform: scale(1);}10%,20% {-ms-transform: scale(0.9) rotate(-3deg);}30%,50%,70%,90% {
+-ms-transform: scale(1.1) rotate(3deg);}40%,60%,80% {-ms-transform: scale(1.1) rotate(-3deg);}100% {-ms-transform: scale(1) rotate(0);}}
+@keyframes a-ring {0% {transform: scale(1);}10%,20% {transform: scale(0.9) rotate(-3deg);}30%,50%,70%,90% {transform: scale(1.1) rotate(3deg);}
+40%,60%,80% {transform: scale(1.1) rotate(-3deg);}100% {transform: scale(1) rotate(0);}}
+.slogan{font-size: 34px;vertical-align: top;position: absolute;left:360px;color:rgb(21,123,195);
+text-shadow :  rgba(200,200,200,1) 3px 3px 20px;font-family: '幼圆','Microsoft YaHei';
+}
+.nav{height: 45px;line-height: 45px;background: rgb(21,123,195);border-radius:2px;
+   -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, .175);width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .175);z-index: 100;position: relative;
+}
+.nav>ul >li{position: relative;float: left;width: 111px;text-align: center;background: url("data:image/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABkAAD/4QPiaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjMtYzAxMSA2Ni4xNDU2NjEsIDIwMTIvMDIvMDYtMTQ6NTY6MjcgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcFJpZ2h0cz0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3JpZ2h0cy8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBSaWdodHM6TWFya2VkPSJGYWxzZSIgeG1wTU06T3JpZ2luYWxEb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6N2FiY2EzMTQtYWQ5OS0xMWUzLWIxNDUtODE4MzNlYWQ1ZTlkIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYzNEZFNzZEMTM0QTExRTRBMjY4Q0JDODVCN0Y4QTI2IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYzNEZFNzZDMTM0QTExRTRBMjY4Q0JDODVCN0Y4QTI2IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDUzYgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzJDOUFBRTIzODEzRTQxMUI0MThBMTQwRkMwMEM3QTAiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDo3YWJjYTMxNC1hZDk5LTExZTMtYjE0NS04MTgzM2VhZDVlOWQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAABAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAgICAgICAgICAgIDAwMDAwMDAwMDAQEBAQEBAQIBAQICAgECAgMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwP/wAARCAAsAAMDAREAAhEBAxEB/8QAeAAAAgMAAAAAAAAAAAAAAAAAAAQDBQgBAAEFAAAAAAAAAAAAAAAAAAQBAgMFCRAAAAIHBAgHAAAAAAAAAAAAERMAITFBEhQVkQIislFhcTKCkiQ1VWUWJkY3hxEAAgICAgMAAAAAAAAAAAAAABEBEqGkIaITo7P/2gAMAwEAAhEDEQA/AMWl3giBUBnDGWPMpNqnBhqi2Lu0uZ8nMF0Xq+laBaprbEFvHuRJSerJA9omPoYi/wC7pbIrYlfad1BdY12Hxol9CZ+sT+XEkvhnbsNv8EJn9EWrtxAL8fmrXpZ0jLBHPUQxQvCHXum2BGjxOcH/2Q==") no-repeat right top;}
+.nav>ul >li>a{text-decoration: none;color:white;width: 100%;display: block;font-size: 17px;font-weight: bold;}
+.nav>ul >li>a:hover,.nav>ul >li>a.cur{color: #fff !important;background:url(/alitjp/images/nav_19.jpg) no-repeat;}
+.downward{
+    display: inline-block;
+    width: 0;position: absolute;top:22px;
+    height: 0;
+    vertical-align: middle;
+    border-top: 4px solid;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;margin-left: 2px;
+}
+.rightward {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-left: 4px solid;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+.sub1,.sub2{
+	position: absolute;z-index:2;
+	border-radius:0 0 4px 4px;
+   -webkit-box-shadow: 0 5px 12px rgba(0, 0, 0, .3);    border: 1px solid #a9a9a9;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .3);
+    display:none;background:rgb(255,250,250) /* rgb(52,140,204); */
+}
+.sub1 li{   position: relative;}
+.sub1 li,.sub2 li{     border-bottom: 1px solid #e4e4e4;width: 109px;}
+.sub2{position: absolute;left:100%;top:-1px}
+.sub1 a,.sub2 a{
+	color:#247eab;display: block;height: 37px;line-height: 37px;text-decoration: none;
+}
+.sub1 a:hover{
+	background:#ffaa31;color:white
+}
+.ring-hover{position: absolute;}
+.nvfix{position: fixed;width: 1000px;}
+.top0{top:0 !important}
+.icsycls{color:#A52A2A;letter-spacing:0px;margin-right: 5px;float: left;}
+#id_span_zcdl{float: left;margin-left: 3px;}
+.icsycls:before, .icon-cguanliyuan:before,.icon-tuichu:before{color: rgb(21,123,195);    margin-right: 2px;font-size: 18px;}
+.icon-cguanliyuan:before{font-size: 15px;margin-left: 12px;}
+.bread{
+    padding: 8px 15px;
+    margin-bottom: 20px !important;
+    list-style: none;
+    background-color: #f5f5f5;
+    border-radius: 4px;border-bottom: 1px solid #eee;
+}
+.bread a{color: #428bca;text-decoration: none;}
+.bread li{display:inline-block;}
+.bread>ul>li+li:before {    padding: 0 5px; color: #ccc;content: "/\00a0";}
+.brdsy:before {position: relative;top: -1px;}
+.pagin{position: relative;width: 90%;margin: 0 auto 30px;}
+.fymsg{display: inline-block;padding: 10px;font-size: 12px;}
+#fenye{position: absolute;right:0;display: inline-block;padding-top: 4px;}
+.laypage_btn{font-family: 'Microsoft YaHei';cursor: pointer;}
+.fymsg i {
+    color: #056dae;
+    font-style: normal;
+    font-weight: bold;
+    padding: 0 2px;
+}
+.nav1k{display: none;}
+#usrshenfen{font-size: 13px;}
+
+.icon-zhuce1:before { content: "\e660"; color: rgb(21,123,195);    margin-right: 2px;margin-left: 12px;font-size: 19px;}
+.icon-mimadenglu:before { content: "\e6ab"; color: rgb(21,123,195);   font-size: 20px;}
+.clsyhtx{width:26px;position: relative;top:0px;cursor: pointer;vertical-align: super;    border-radius: 50%;}
+.icon-cguanliyuan:before{margin-right: 0 !important; margin-left: 8px !important;}
+.shownc {vertical-align:super;cursor: pointer;max-width: 115px;overflow: hidden;white-space:nowrap;text-overflow:ellipsis;display: inline-block;}
+
+
+@media (max-width: 1000px) {
+	.sycontent,.head{width:99%;margin: 0 auto;}
+	.banner{height: 60px;line-height: 60px;}
+	.slogan{font-size: 25px;left:80px;}
+	.ring-hover{width: 48px !important;margin-left: 16px;top:0 !important;left:0 !important}
+	.nav{height: 40px;line-height: 41px;/* overflow: hidden; */position: relative;}
+	.nav>ul >li>a{font-size: 14px;font-weight: normal;}
+	.nav>ul >li>a:hover,.nav>ul >li>a.cur{background:url(/alitjp/images/nav_19_80.jpg) no-repeat;}
+	.nav>ul {position: relative;}
+	.nav>ul >li{display: none;width: 80px;background:url(/alitjp/images/nav_20_39.jpg) no-repeat right top;}
+	.downward{top: 18px;}
+	.yqlj{ border-top: none}
+	.ljtt{position: relative;top: 16px;}
+	.ljulout{ border-top: 1px solid rgb(189,215,242);width: 99%;padding: 0;}
+	.ljnr{padding: 21px 4px 7px;}
+	a{color:rgb(85, 26, 139);}
+	.nav1k{position: absolute;display: inline-block;
+		width: 32px;height: 40px;z-index: 9999;opacity:0.25}
+	.leftarr{left:0;background: url(/alitjp/images/nav_1000.png) no-repeat 1px -6px;}
+	.rightarr{right:0;background: url(/alitjp/images/nav_1000.png) no-repeat -1px -55px;}
+	.sub1 a,.sub2 a{font-size: 12px !important;height: 29px;line-height: 28px;}
+	.sub1 li, .sub2 li {width: 79px;}
+}
+
+</style>
+<div class="head">
+	<div style="background: rgb(247,247,247);border-bottom:1px solid rgb(238,238,238)">
+		<div class="topbar">
+			<span class="icon-shouye icsycls"> 
+				tjpcms欢迎你
+			</span>
+			<span id="id_span_zcdl"></span>
+			<span style="float: right;margin-top: 3px;margin-right: 2px;">
+				<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=9025ac47d03fec43dd8b0fdf5fa7bfdd257ac645fe3ee3f32f01741f5260c2cb"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="tjpcms 一 最懂你的cms" title="tjpcms 一 最懂你的cms"></a>
+			</span>
+			<span style="float: right;margin-top: 2px;margin-right: 1px;">
+				<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=57454144&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:57454144:52" alt="联系作者" title="联系作者"/></a>
+			</span>
+		</div>
+		<div style="clear:both"></div>
+	</div>
+	<div class="banner" >
+			<a href="/alitjp/">
+				<img class="ring-hover" style="margin-top: 8px;margin-right: 10px;;width:66px;top:-100px" src="/alitjp/images/tjpcms/logo4.png" alt="" />
+			</a>
+		<span class="slogan">
+			tjpcms 一 最懂你的cms2/alitjp
+		</span>
+		
+		
+	</div>
+	
+	<div class="nav" onselectstart="return false">
+		<a href="javascript:" class="nav1k leftarr"></a>
+		<a href="javascript:" class="nav1k rightarr"></a>
+		<ul >
+			<li>
+				<a href="/alitjp/" title="网站首页" >首页</a>
+			</li>
+			
+				<li >
+					<a href="/alitjp/static/lanmu/guanyu.html" >
+						关于tjpcms
+						
+					</a>
+					
+				</li>
+			
+				<li >
+					<a href="/alitjp/static/lanmu/yanshi.html" >
+						演示
+						
+					</a>
+					
+				</li>
+			
+				<li >
+					<a href="javascript:" class="cur">
+						教程
+						<span class="downward"></span>
+					</a>
+					
+						<ul class="sub1"  >
+							
+								<li >
+									<a href="javascript:">
+										图文教程
+										<span class="rightward"></span>
+									</a>
+									
+										<ul class="sub2"  >
+											
+												<li >
+													<a href="/alitjp/static/lanmu/huanjing.html">环境搭建</a>
+												</li>
+											
+												<li >
+													<a href="/alitjp/static/lanmu/jiandan.html">简单应用</a>
+												</li>
+											
+												<li >
+													<a href="/alitjp/static/lanmu/jinjie.html">进阶应用</a>
+												</li>
+											
+												<li >
+													<a href="/alitjp/static/lanmu/erci.html">二次开发</a>
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+								<li >
+									<a href="/alitjp/static/lanmu/spjc.html">
+										视频教程
+										
+									</a>
+									
+								</li>
+							
+								<li style="border:0">
+									<a href="javascript:">
+										网友专栏
+										<span class="rightward"></span>
+									</a>
+									
+										<ul class="sub2"  >
+											
+												<li >
+													<a href="/alitjp/static/lanmu/jsbw.html">技术博文</a>
+												</li>
+											
+										</ul>
+									
+								</li>
+							
+						</ul>
+					
+				</li>
+			
+				<li >
+					<a href="javascript:" >
+						动态
+						<span class="downward"></span>
+					</a>
+					
+						<ul class="sub1"  >
+							
+								<li >
+									<a href="/alitjp/static/lanmu/bbgx.html">
+										版本更新
+										
+									</a>
+									
+								</li>
+							
+								<li >
+									<a href="/alitjp/static/lanmu/kfbj.html">
+										开发笔记
+										
+									</a>
+									
+								</li>
+							
+								<li style="border:0">
+									<a href="/alitjp/static/lanmu/dashi.html">
+										大事记
+										
+									</a>
+									
+								</li>
+							
+						</ul>
+					
+				</li>
+			
+				<li >
+					<a href="/alitjp/static/lanmu/anli.html" >
+						案例
+						
+					</a>
+					
+				</li>
+			
+				<li >
+					<a href="javascript:" >
+						互动
+						<span class="downward"></span>
+					</a>
+					
+						<ul class="sub1"  >
+							
+								<li >
+									<a href="/alitjp/static/lanmu/wenda.html">
+										问答
+										
+									</a>
+									
+								</li>
+							
+								<li >
+									<a href="/alitjp/static/lanmu/liuyan.html">
+										留言
+										
+									</a>
+									
+								</li>
+							
+								<li >
+									<a href="/alitjp/static/lanmu/bgfk.html">
+										Bug反馈
+										
+									</a>
+									
+								</li>
+							
+								<li >
+									<a href="/alitjp/static/lanmu/sqyl.html">
+										申请友链
+										
+									</a>
+									
+								</li>
+							
+								<li style="border:0">
+									<a href="/alitjp/static/lanmu/zjfk.html">
+										最近访客
+										
+									</a>
+									
+								</li>
+							
+						</ul>
+					
+				</li>
+			
+				<li >
+					<a href="javascript:" >
+						关于作者
+						<span class="downward"></span>
+					</a>
+					
+						<ul class="sub1"  >
+							
+								<li >
+									<a href="/alitjp/static/lanmu/jianjie.html">
+										简介
+										
+									</a>
+									
+								</li>
+							
+								<li >
+									<a href="/alitjp/static/lanmu/xzp.html">
+										小作品
+										
+									</a>
+									
+								</li>
+							
+								<li >
+									<a href="/alitjp/static/lanmu/jsfx.html">
+										技术分享
+										
+									</a>
+									
+								</li>
+							
+								<li style="border:0">
+									<a href="/alitjp/static/lanmu/zatan.html">
+										杂谈
+										
+									</a>
+									
+								</li>
+							
+						</ul>
+					
+				</li>
+			
+				<li style="background:none">
+					<a href="/alitjp/static/lanmu/jz.html" >
+						捐赠
+						
+					</a>
+					
+				</li>
+			
+		</ul>
+	</div>
+</div>
+
+
+<script id="sid_dl_no" type="text/html">
+	<a href="javascript:" style="vertical-align:super" id="id_top_zc" style="margin-right:1px" onclick="fn_zhuce()">注册</a>
+	<a href="javascript:" style="vertical-align:super" onclick="fn_topdl()" title="登录tjpcms">登录</a>
+</script>
+<script id="sid_dl_yes" type="text/html">
+	{{if tx!=null && tx!=undefined && tx!=''}}
+		<img src="{{tx}}" alt="头像"  title="点击打开{{nc}}的个人中心" class="clsyhtx" onclick="$(this).next().children('a').trigger('click')"/>
+		<span class="shownc"><a href="javascript:" onclick="fn_grzx()">{{nc}}</a></span>
+	{{else}}
+		<span class='shownc'  title="点击打开{{nc}}的个人中心">
+			<a href="javascript:" onclick="fn_grzx()" class="icon-cguanliyuan ">&nbsp;{{nc}}&nbsp;</a>
+		</span>
+	{{/if}}
+	<a href="javascript:" style="float:right;margin-left:3px" onclick="fn_ssotc()" title="退出网站登录">退出</a>
+</script>
+
+
+<script>
+	//个人中心
+	function fn_grzx(){
+		location.href='/alitjp/g2grzx.dhtml'
+	}
+	
+	//用户在个人网站退出时，畅言端也同步退出
+	function fn_ssotc(){
+		fn_ntp_aj('/alitjp/ssousr_tc.dhtml',null,function(){
+			var img = new Image();
+			img.src='http://changyan.sohu.com/api/2/logout?client_id=cysHEHjOS';
+			location.reload();
+		})
+	}
+
+	function fixNav(){
+		if( $(document).scrollTop() >0 ){
+			if ($('.nav').is(":animated")){//动画中
+				
+			}else{
+				$('.nav').addClass('nvfix').animate({top:0},function(){
+					//console.log("动画结束$(document).scrollTop()"+$(document).scrollTop())
+					if ($(document).scrollTop()>0) $('.nav').addClass('top0')
+					else $('.nav').removeClass('nvfix top0')
+					$('.nav').removeAttr('style')
+				})
+			}
+		}else{
+			$('.nav').removeClass('nvfix').removeClass('top0').removeAttr('style')
+		}
+	}
+	
+	
+	var mu_tmrid = null;
+	function hideMenu(tt){
+		if (tt){
+			tt.siblings().find("ul").stop(false, true).hide();
+			tt.find("ul").slideUp()
+		}
+	}
+
+	$(function(){
+		//获取登录状态
+		$.ajax({
+			type:"POST",
+			url:"/alitjp/aj_getdls.dhtml",
+			datatype: "JSON",
+			success:function(json){
+				var obj = eval("("+json+")");
+				if (obj.nc){
+					var html = template('sid_dl_yes', obj);
+					$("#id_span_zcdl").empty().html(html);
+					if (location.pathname=="/alitjp/" || location.pathname=="/alitjp/index.dhtml" ||  location.pathname=="/alitjp/static/index.html"){
+						layer.tips('点击可进入【个人中心】', $(".shownc"), {tips : [ 1, '#3595CC' ], tjpcms_clscont:'touming50'});
+					}
+				}else{
+					var html = template('sid_dl_no', {});
+					$("#id_span_zcdl").empty().html(html)
+					var zctipid=null;
+					$("#id_top_zc").on("mouseover mouseout", function(event) {
+						if (event.type == "mouseover") {
+							zctipid = layer.tips('注册后可投稿、享受专属服务', $("#id_top_zc"), {tips : [ 1, '#3595CC' ]});
+						} else if (event.type == "mouseout") {
+							layer.close(zctipid)
+						}
+					})
+				}
+
+				if (obj.hds){
+					$.each(obj.hds, function(idx,obj){
+						if(obj.lx=='首页下载') $(".xzcnt").text(obj.cnt);
+						else if (obj.lx=='首页点赞') $(".zancnt").text(obj.cnt).attr("title","累计赞"+obj.cnt+"次")
+					})
+				}
+				
+			},
+			error: function(){
+				layer.msg('获取登录状态失败，请刷新后重试！', { icon:2, title:'错误'});
+			}
+		});
+		
+	
+		$("body").click(function(ev) {
+			if ($(ev.target).parents(".nav").length <= 0) {
+				$(".nav>ul li").children("ul").hide()
+			}
+		})
+
+		if ($(window).width() > 1000) {
+			//1. 动画未结束，直接消失
+			//2. 动画已结束，默认速度上拉
+			//3. 有其他下拉同时存在，200速度上拉
+			//4. 左右反复移动，离开动画就消失，不动时正常拉出
+			//5. 鼠标移出一秒内再移入不消失
+			//等等
+			$(".nav>ul li").hover(function() {
+				clearInterval(mu_tmrid);
+				mu_tmrid = null;
+				var sbuls = $(this).siblings().children("ul");
+				sbuls.stop(true, true);
+				if ($(this).children("ul").hasClass("sub1")) {
+					sbuls.slideUp(200)
+					$(this).children("ul").slideDown()
+				} else if (!$(this).children("ul").is(":visible")) {
+					sbuls.hide()
+					$(this).children("ul").show().css({
+						width : 0
+					}).animate({
+						width : "100%"
+					})
+				}
+			}, function() {
+				var tt = $(this)
+				if (tt.children("ul").is(":animated")) {
+					tt.children("ul").hide()
+				} else if (tt.children("ul").is(":visible")) {//已经显示出来了
+					if (mu_tmrid == null) {
+						if ($(this).children("ul").hasClass("sub2"))
+							tt = $(this).parent().parent()
+						mu_tmrid = setTimeout(function() {
+							hideMenu(tt)
+						}, 1000)
+					}
+				} else {
+
+				}
+			});
+
+			$(".ring-hover").animate({top : 10}).animate({top : -7}).animate({top : 0})
+			$(".slogan").animate({left : 64}).animate({left : 92}).animate({left : 80})
+			$(window).on('scroll', function() {
+				fixNav();
+			});
+			fixNav();
+		} else {
+			var c = parseInt($(window).width() / 80);
+			$(".nav>ul>li:lt(" + (c) + ")").show()
+
+			$("a").removeAttr("target");//手机上显示时，就不打开新窗口了
+
+			$(".nav>ul li").click(function() {
+				$(".sub1").hide()
+				$(this).children("ul").show()
+			})
+
+			$(".leftarr").click(function() {
+				if ($(".nav>ul>li:last").is(":visible")) {
+					layer.msg("已到最后一项！")
+					return;
+				}
+				$(".nav>ul>li:visible:first").animate({
+					width : 0
+				}, function() {
+					$(".nav>ul>li:visible:last").next().show();
+					$(this).hide();
+				})
+			})
+			$(".rightarr").click(function() {
+				if ($(".nav>ul>li:visible:first").index() == "0") {
+					layer.msg("已到第一项！")
+					return;
+				}
+				$(".nav>ul>li:visible:last").hide()
+				$(".nav>ul>li:visible:first").prev().css({
+					width : 0
+				}).show().animate({
+					width : 80
+				})
+			})
+
+		}
+
+	})
+</script>
+	
+	<div class="sycontent">
+		
+
+
+	<div class="bread">
+		<ul>
+			<li><a class="icon-shouye brdsy" href="/alitjp/"> 首页</a></li>
+			
+			   <li><a href="#">教程</a></li>
+			
+			   <li><a href="#">图文教程</a></li>
+			
+			   <li><a href="#">进阶应用</a></li>
+			
+		</ul>
+	</div>
+
+
+
+
+		<div class="shua">
+			<div class="huac">
+				这里给出tjpcms面对更复杂需求时的配置，尽可能的减少重复劳动的必要。
+			</div>
+		</div>
+		<div class="outtbl">
+			<table class="list" >
+				<thead>
+					<tr>
+						<th>标题</th>
+						<th style="">点击次数</th>
+						<th style="width:20%;">更新日期</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+						<tr style="background-color: #fefefe;">
+							<td><a target="_blank" onclick="fn_cs(this)" href="/alitjp/static/neirong/jinjie_detail/153.html">自定义操作区、列表区自定义字段（用户列表页面）</a></td>
+							<td>137</td>
+							<td>2016-12-20</td>
+						</tr>
+					
+				</tbody>
+			</table>
+		</div>
+			<div class="pagin">
+				<span class="fymsg">共<i>1</i>条记录，每页<i>20</i>条，共<i>1</i>页</span>
+				<div id="fenye"></div>
+			</div>
+	</div>
+	
+	
+<style>
+	.cmnbtm{height: 36px;background: #3071a9;width: 1000px;margin: 0 auto;line-height: 36px;text-align: center;color:#E7E7E7;}
+	.cmnbtm a{font-size: 12px;color:#E7E7E7 !important;text-decoration: none !important;
+		font-family:"Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,
+			"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3",FontAwesome,sans-serif;
+		-webkit-transition: all 0.5s; -moz-transition: all 0.5s; -o-transition: all 0.5s;}
+	.cmnbtm a:hover{color:white !important}
+	#SOHUCS, #cyReward{max-width: 1000px;}
+	#cyReward{text-align: center;margin-bottom: 22px;}
+
+	@media (max-width: 1000px) {
+		.cmnbtm{width:100%;}
+	}
+</style>
+
+
+
+<div class="cmnbtm">
+	&copy;2016-2017
+		<a  target="_blank"  style="font-size:14px" href="http://www.tjpcms.com">www.tjpcms.com</a> &nbsp;
+	<a class="" target="_blank" style="text-decoration:underline !important;" href="http://www.miitbeian.gov.cn/"> 苏ICP备16055273号-1</a>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?0893dd8323fb604eea546d73cf49bf6b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script>
+	(function() {
+		var bp = document.createElement('script');
+		var curProtocol = window.location.protocol.split(':')[0];
+		if (curProtocol === 'https') {
+			bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+		} else {
+			bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+		}
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(bp, s);
+	})();
+</script>
+</div>
+
+
+<style>
+	.ssoinpt{
+		width: 100%;
+		height: 36px;
+	    border: 0;
+	    color: #000;
+	    font-size: 14px;
+	    line-height: 30px;
+	    margin: 8px 0;
+		border: 1px solid #bac7d2;
+	    background: #f7fcfe;
+	    border-radius: 2px;
+	    box-shadow: 2px 2px 2px #e7f1f7 inset;
+	    text-indent: 35px;
+	}
+	.csyzm{width: 65%;display: inline-block;}
+	.passcode{width: 30%;display: inline-block;height: 36px;line-height: 30px;margin: 8px 0;float: right;border: 1px solid #bac7d2;-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;cursor: pointer;
+	border-radius: 2px;}
+	#popzhuce .ssoinpt,#popzhuce .passcode{height: 29px;  margin: 6px 0;}
+	.udltjpcms{width: 100%;background: rgb(56,163,253);padding: 10px;font-size: 16px;color: #fff;-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;margin-top: 8px;
+	border-radius: 3px;cursor: pointer;}
+	#popzhuce .udltjpcms{padding: 7px;}
+	.udltjpcms:hover{background-color: #09f;}
+	.split-hr{
+	    width: 90%;
+	    margin: 28px auto 0;
+	    text-align: center;
+	    border-top: 1px solid #e5e5e5;
+	    position: relative;
+	}
+	.split-txt{
+	    color: #bababa;
+	    font-size: 14px;
+	    padding: 0 6px;
+	    background: #FFF;
+	    margin-top: -10px;
+	    margin-left: -42px;
+	    top: 60%;
+	    left: 50%;
+	    position: absolute;
+	}
+	.login-group{
+	    margin: 16px auto 0;
+	    text-align: center;
+	}
+	.login-item{
+		display: inline-block;
+	    cursor: pointer;
+	    margin: 0 12px;
+	    width: 40px;
+	}
+	.login-item .login-logo {
+	    width: 40px;
+	    height: 40px;
+	    display: block;
+	    border-radius: 40px;
+	    background-image: url(/alitjp/images/sso/sso_wbqq.png);
+	    background-repeat: no-repeat;
+	}
+	.login-logo-qq{background-position: 0 -80px;}
+	.login-logo-weibo{background-position: -40px -40px;}
+	.login-logo-wechat{background-image: url(/alitjp/images/sso/sso_bd.png) !important;}
+	.cls_pop_ssotitle{border-radius: 10px 10px 0 0;font-weight: bold;font-size: 15px;}
+	.cls_pop_ssoouter *{font-family: "Microsoft YaHei";}
+	.cls_pop_ssoouter{border-radius: 10px;max-width:95% !important;min-width:320px;}
+	
+	.clszciptdiv,.clsdliptdiv{position: relative;}
+	.icon-sina:before { content: "\e66b"; font-size: 19px;}
+	.icon-mima1:before { content: "\e7c6"; font-size: 18px;}
+	#popzhuce .icon-cguanliyuan:before { font-size: 17px;margin: 0 !important;}
+	.icon-check4:before { content: "\e7bd";font-size: 17px; }
+	.clszciptdiv [class*='icon-']:before { position: absolute;left: 8px;top: 12px;color:gray}
+	.clsdliptdiv [class*='icon-']:before { position: absolute;left: 8px;top: 17px;color:gray}
+
+	.cls_pop_ssoouter .layui-layer-close {-webkit-animation: 3s infinite linear;-moz-animation: 3s infinite linear;-ms-animation: 3s infinite linear;animation: 3s infinite linear;
+		background-position: 2px -39px;margin-left: 0;padding: 0px;}
+	.cls_pop_ssoouter .layui-layer-close:hover {-webkit-animation-name: a-rotate;-moz-animation-name: a-rotate;-ms-animation-name: a-rotate;animation-name: a-rotate;}
+	@-webkit-keyframes a-rotate {0% {-webkit-transform: rotate(0deg);}100% {-webkit-transform: rotate(359deg);}}
+	@-moz-keyframes a-rotate {0% {-moz-transform: rotate(0deg);}100% {-moz-transform: rotate(359deg);}}
+	@-ms-keyframes a-rotate {0% {-ms-transform: rotate(0deg);}100% {-ms-transform: rotate(359deg);}}
+	@keyframes a-rotate {0% {transform: rotate(0deg);}100% {transform: rotate(359deg);}}
+	
+	.clszctip{position: absolute;left: -28px;top: 2px;}
+	.clszctip:before{color:#2c7 !important;font-weight: bold;}
+	.hide{display: none;}
+	.icon-cha1:before { content: "\e673"; font-size: 14px !important;color:red !important;}
+	.icon-check4{top: 0 !important;}
+	.icon-jianpan:before {    font-size: 19px; }
+	.cls_pop_zctip .layui-layer-close{right: -11px !important;top: -9px !important;}
+	.ssoyzmbdr{border-color:red !important}
+}
+</style>
+
+
+<!-- 登录框 -->
+<div id="popsso" style='display:none;padding:22px;'>
+	<div class="clsdliptdiv">
+		<input class="ssoinpt" type="text" value="" placeholder="邮箱" name="yx">
+		<span class="icon-sina"></span>
+	</div>
+	<div class="clsdliptdiv">
+		<input class="ssoinpt" type="password" value="" placeholder="登录密码" name="mm">
+		<span class="icon-mima1"></span>
+	</div>
+	<div class="clsdliptdiv">
+		<input name="yzm" maxlength="4" class="ssoinpt csyzm" type="text" placeholder="验证码">
+		<img alt="验证码" src="/alitjp/idCode" width="100" height="32" class="passcode" onclick="this.src+=''" title="看不清？点击换一个" />
+		<span class="icon-jianpan"></span>
+	</div>
+	<div style="clear:both"></div>
+	<a href="javascript:" style="float:right;font-size:12px;" onclick="layer.msg('先联系群主')">忘记账号密码？</a>
+	<a href="javascript:" style="font-size:12px;" onclick="fn_zhuce(0)">没有账号？点击注册</a>
+	<input type="button" onclick="fn_ljdl()" value="立即登录" class="udltjpcms"/>
+	<div class="split-hr">
+		<span class="split-txt">第三方登录</span>
+	</div>
+	<ul class="login-group">
+		<li class="login-item"><span class="login-logo login-logo-qq" title="QQ登录"></span></li>
+		<li class="login-item"><span class="login-logo login-logo-weibo" title="微博登录"></span></li>
+		<li class="login-item"><span class="login-logo login-logo-wechat" title="百度登录"></span></li>
+	</ul>
+</div>
+
+<!-- 注册框 -->
+<div id="popzhuce" style='display:none;padding:18px 25px 19px 28px;'>
+	<form action="">
+		<div class="clszciptdiv">
+			<span class="clszctip  hide icon-check4"></span>
+			<input class="ssoinpt" type="text" value="" name="yx" placeholder="邮箱" maxlength="32">
+			<span class="icon-sina"></span>
+		</div>
+		<div class="clszciptdiv">
+			<span class="clszctip  hide icon-check4"></span>
+			<input class="ssoinpt" type="password" value="" name="mm" placeholder="登录密码 (6-12位)" maxlength="12">
+			<span class="icon-mima1"></span>
+		</div>
+		<div class="clszciptdiv">
+			<span class="clszctip hide icon-check4"></span>
+			<input class="ssoinpt" type="password" value="" name="qrmm" placeholder="确认密码" maxlength="10">
+			<span class="icon-mima1"></span>
+		</div>
+		<div class="clszciptdiv">
+			<span class="clszctip hide icon-check4"></span>
+			<input class="ssoinpt" type="text" value="" name="nc" placeholder="昵称 (2-15位)" maxlength="15">
+			<span class="icon-cguanliyuan"></span>
+		</div>
+		<div class="clszciptdiv">
+			<span class="clszctip hide icon-check4"></span>
+			<input name="yzm" maxlength="4" class="ssoinpt csyzm" type="text" placeholder="验证码">
+			<img alt="验证码" src="/alitjp/idCode" width="100" height="32" class="passcode" onclick="this.src+=''" title="看不清？点击换一个" />
+			<span class="icon-jianpan"></span>
+		</div>
+	</form>
+	<div style="clear:both"></div>
+	<a href="javascript:" style="float:right;font-size:12px;" onclick="layer.msg('先联系群主')">忘记账号密码？</a>
+	<a href="javascript:" style="font-size:12px;" onclick="fn_topdl(0)">已有账号？点击登录</a>
+	<input type="button" onclick="fn_ljzc()" value="立即注册" class="udltjpcms"/>
+	<div class="split-hr">
+		<span class="split-txt">第三方登录</span>
+	</div>
+	<ul class="login-group">
+		<li class="login-item"><span class="login-logo login-logo-qq" title="QQ登录"></span></li>
+		<li class="login-item"><span class="login-logo login-logo-weibo" title="微博登录"></span></li>
+		<li class="login-item"><span class="login-logo login-logo-wechat" title="百度登录"></span></li>
+	</ul>
+</div>
+
+<script src="/alitjp/js/rsa.js"></script>
+<script src="/alitjp/layer/layer.js"></script>
+<script>
+	//顶部按钮：登录
+	var vTitle ='<img  id="poptitle" src="/alitjp/images/tjpcms/logo4.png" style="vertical-align:middle;width:31px;" /> 登录tjpcms';
+	var vCont = $('#popsso');
+	function fn_topdl(clr){
+		layer.closeAll();
+		layer.open({
+		    type: 1,
+		    title:vTitle,
+		    area:'auto',
+		    content:vCont,
+		    scrollbar:false,
+		    id:'id_pop_sso',
+		    tjpcms_clstitle:'cls_pop_ssotitle',
+		    tjpcms_clsouter:'cls_pop_ssoouter',
+		    success:function(layero, index){
+		    	//为了初始化弹出框
+		    		if (!(clr==0)){//默认是要初始化清空的，弹出之后点击切换可以不清空
+			    	initPhd();
+			    	if ('placeholder' in document.createElement('input')) {
+			    		$("#popsso input:not(.udltjpcms)").val('');
+			    	}
+		    	}
+		    	$("#popsso input[name='yzm']").removeClass('ssoyzmbdr')
+
+		    	var eyzm = $("#popsso .passcode");
+		    	eyzm.attr("src", eyzm.attr("src"))
+		    	$("#popsso input:eq(0)").focus();
+		    }, cancel:function(index){
+				return qurGuanbi("popsso")
+		    }
+		});
+	}
+
+	//询问是否关闭注册（登录）框
+	function qurGuanbi(popid){
+    	var xunwen = false;
+    	$("#"+popid+" input:not(.udltjpcms)").each(function(){
+    		if (!_epp($(this).val())){
+				xunwen = true;
+    			return false;//退出循环
+    		}
+    	})
+    	if (xunwen){
+   			layer.confirm('您已填写了内容，确定要关闭吗？', {icon: 3, title:'提示'}, function(index){
+   				layer.closeAll();
+   				return true;
+   			})
+   			return false;
+    	}else{
+	    	layer.closeAll();
+	    	return true;
+    	}
+	}
+	
+	//注册
+	function fn_zhuce(clr){
+		layer.closeAll();
+		layer.open({
+		    type: 1,
+		    title:'<img  id="poptitle" src="/alitjp/images/tjpcms/logo4.png" style="vertical-align:middle;width:31px;" /> 注册tjpcms',
+		    area:'auto',
+		    content:$("#popzhuce"),
+		    id:'id_pop_zhuce',
+		    scrollbar:false,
+		    tjpcms_clstitle:'cls_pop_ssotitle',
+		    tjpcms_clsouter:'cls_pop_ssoouter',
+		    success:function(layero, index){
+		    	//为了初始化弹出框，关闭后再打开要全部清空到初始状态
+		    		if (!(clr==0)){
+			    	initPhd();
+			    	if ('placeholder' in document.createElement('input')) {
+			    		$("#popzhuce input:not(.udltjpcms)").val('');
+			    	}
+		    	}
+
+		    	var eyzm = $("#popzhuce .passcode");
+		    	eyzm.attr("src", eyzm.attr("src"))
+		    	$("#popzhuce .udltjpcms").focus();
+		    	$("#popzhuce .clszctip").addClass('hide')
+		    }, cancel:function(index){
+				return qurGuanbi("popzhuce")
+		    }
+		});
+	}
+
+	var bnktip = '输入的值不能含有空格';
+	$(function(){
+		$(".login-item").click(function(){
+			var idx = $(this).index();
+			if (idx==0){//qq登录
+				location.href='/alitjp/dsf_qqlog_log.dhtml';
+			}else if (idx==1){//微博登录
+				location.href='/alitjp/dsf_sinalog_log.dhtml';
+			}else{//百度登录
+				location.href='/alitjp/dsf_bdlog_log.dhtml';
+			}
+		}).hover(function(){
+			$(this).toggleClass("touming88")
+		},function(){
+			$(this).toggleClass("touming88")
+		})
+
+		//验证码的校验
+		$('.csyzm').bind('input propertychange blur', function(ev) {
+			var je= $(this)
+			if (/\s+/.test(je.val())){
+				tipError(je, "-1", bnktip)
+			}else if (ev.type=='blur' || (je.val().length >= 4 && '验证码'!=je.val())) {
+				$.ajax({
+					type:"POST",
+					url:'/alitjp/zcdl_chk_yzm.dhtml',//去后台校验验证码
+					data:{yzm:je.val()},
+					datatype: "text",
+					success:function(ret){
+						tipError(je, ret, "验证码错误（点击图案可更换）")
+					}
+				});
+			}
+		})
+
+		$(".clszctip").mouseover(function(){
+			tipError($(this).next())
+		})
+
+ 		//处理弹出是否回到首页的框后按回车的问题
+		document.onkeydown = function(e){ 
+		    var ev = document.all ? window.event : e;
+		    if(ev.keyCode==13) {
+		    	if ($("#popzhuce").is(":visible"))  $("#popzhuce").find(".udltjpcms").trigger('click')
+		    	if ($("#popsso").is(":visible"))  $("#popsso").find(".udltjpcms").trigger('click')
+		     }
+		}
+
+		//前台校验昵称
+		$("#popzhuce input[name='nc']").bind(' blur', function(event) {
+			if (/\s+/.test($(this).val())){
+				tipError($(this), "-1", bnktip)
+			}else{
+				tipError($(this), (_epp($(this).val()) || $(this).val().length<2)?"-1":"0", "昵称长度范围需为2-15位")
+			}
+		})
+
+		//密码的校验
+		$("#popzhuce input[name='mm']").bind(' blur', function(event) {
+			var mm = $(this).val();
+			if (/\s+/.test(mm)){
+				tipError($(this), "-1", bnktip)
+			}else if (_epp(mm) || mm.length<6){
+				tipError($(this), "-1", "密码长度范围需为6-12位")
+			}else{
+				var qrmm = $("#popzhuce input[name='qrmm']").val();
+				if (_epp(qrmm)){
+					tipError($(this), "0")
+				}else{
+					if (mm!=qrmm){
+						tipError($(this), "-1", "两次输入的密码不一致")
+					}else{
+						tipError($(this), "0")
+						tipError($("#popzhuce input[name='qrmm']"), "0")
+					}
+				}
+			}
+		})
+		$("#popzhuce input[name='qrmm']").bind(' blur', function(event) {
+			var qrmm = $(this).val();
+			var mm = $("#popzhuce input[name='mm']").val();
+			if (/\s+/.test(qrmm)){
+				tipError($(this), "-1", bnktip)
+			}else if (_epp(qrmm)){
+				if (_epp(mm)){
+					tipError($(this), "-1", "请输入确认密码")
+				}else{
+					tipError($(this), "-1", "请输入确认密码")
+				}
+			}else{
+				if (_epp(mm)){
+					tipError($("#popzhuce input[name='mm']"), "-1", "请输入6-12位的密码")
+				}else{
+					if (mm!=qrmm){
+						tipError($(this), "-1", "两次输入的密码不一致")
+					}else{
+						tipError($(this), "0")
+						tipError($("#popzhuce input[name='mm']"), "0")
+					}
+				}
+			}
+		})
+
+		//邮箱的校验
+		$("#popzhuce input[name='yx']").bind(' blur', function(event) {
+			var etag = $(this);
+			var pattern =/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+			if (/\s+/.test(etag.val())){
+				tipError(etag, "-1", bnktip)
+			}else if(!pattern.exec(etag.val())){
+				tipError(etag, "-1", "请输入有效的邮箱")
+			}else{
+				$.ajax({
+					type:"POST",
+					url:'/alitjp/zcdl_chk_yx.dhtml',
+					data:{yx:etag.val()},
+					datatype: "text",
+					success:function(ret){
+						tipError(etag, ret, "邮箱已存在，请重新输入")
+					}
+				});
+			}
+		})
+
+		layer.ready(function(){//http://fly.layui.com/jie/1724.html
+			if (''!=''){
+				layer.msg('')
+			}
+		})
+	})
+
+	var g_zcTid = {};
+	function tipError(eipt, ret, msg){
+		if (!ret){
+			ret =_epp(eipt.prev().attr("errmsg"))?"0":"-1";
+		}
+	
+		var nm = eipt.attr("name")
+		if (ret=="0"){//正确
+			eipt.removeClass('ssoyzmbdr')
+			if (eipt.prev().length>0) {eipt.prev().removeClass('icon-cha1 hide').addClass('icon-check4').removeAttr("errmsg");}
+			layer.close(g_zcTid[nm])
+		}else{//错误
+			if (!msg){
+				msg = eipt.prev().attr("errmsg");
+			}else if (eipt.prev().length>0){
+				eipt.prev().removeClass('icon-check4 hide').addClass('icon-cha1').attr("errmsg",msg);
+			}
+			g_zcTid[nm] = layer.tips(msg, eipt,{
+				tjpcms_clsouter:'cls_pop_zctip',time:5000,closeBtn:1,id:"lid_zc_"+nm,tips:[1, '#3595CC'], tjpcms_clscont:'touming88', "z-index":9999,tipsMore:true});//存在时不再弹出
+			//如果是登录框的验证码，把input的边框弄成红色的
+			if (eipt.attr("name")=='yzm' && eipt.closest('#popsso').length>0){
+				eipt.addClass('ssoyzmbdr')
+			}
+		}
+	}
+
+	//立即登录
+	function fn_ljdl(){
+		//查空格
+ 		var hasKg = false, kjfst;
+    	$("#popsso input:not(.udltjpcms)").each(function(){
+    		if (/\s+/.test($(this).val())){
+				hasKg = true;
+    			layer.msg($(this).attr('placeholder')+'中'+bnktip)
+    			if (!kjfst) kjfst = $(this)
+    		}
+    	})
+    	if (hasKg){ kjfst.focus();return};
+
+		//检查验证码
+ 		var eyz = $("#popsso input[name='yzm']")
+		if(_epp(eyz.val()) || eyz.val().length!=4 || eyz.hasClass('ssoyzmbdr')){
+			tipError(eyz, "-1", "验证码错误（点击图案可更换）")
+			return;
+		}  
+
+		var rsakey = RSAUtils.getKeyPair('010001', '', '00835922ef53e653da72d4bc0a9ac5d9db547224bbb9d2f46814e8c507665b4f4795e188c6b7916b6a6e51220e2e78de0438d4a5600c387a928444ef75bc28fdc067b9a418ca59f43fb39600f74e20006784b15002133d3c687e62b41756d739f3bd38b57e3bac41f49bbb03ce5b00971575c765fc6432b29aa8c30f0b7ace1d59');
+		fn_ntp_json('/alitjp/aj_sso_dl.dhtml',{
+			yx:RSAUtils.encryptedString(rsakey, $("#popsso input[name='yx']").val()),
+			mm:RSAUtils.encryptedString(rsakey, $("#popsso input[name='mm']").val()),
+			yzm:eyz.val()
+		},
+		function(){
+			location.reload();
+		},function(data){
+			$.each(data.err, function(idx,obj){
+				tipError($("#popsso input[name='"+obj.zd+"']"), "-1", obj.cw)
+				$("#popsso .passcode").trigger('click')
+			})
+		},{clsA:false})
+	}
+
+	//点击立即注册
+	function fn_ljzc(){
+  		$("#popzhuce input:not(.udltjpcms)").trigger('blur')
+		if ($("#popzhuce .icon-cha1").length>0) return;
+
+		//这边有点坑，验证码是异步校验的，这儿还得单独再确认一下
+		var elyzm= $("#popzhuce input[name='yzm']")
+		if (_epp(elyzm.val()) || elyzm.val().length!=4 || elyzm.prev().hasClass('icon-cha1')){
+			$("#popzhuce input[name='yzm'").trigger('blur')
+			return;
+		} 
+ 
+		var rsakey = RSAUtils.getKeyPair('010001', '', '00835922ef53e653da72d4bc0a9ac5d9db547224bbb9d2f46814e8c507665b4f4795e188c6b7916b6a6e51220e2e78de0438d4a5600c387a928444ef75bc28fdc067b9a418ca59f43fb39600f74e20006784b15002133d3c687e62b41756d739f3bd38b57e3bac41f49bbb03ce5b00971575c765fc6432b29aa8c30f0b7ace1d59');
+		fn_ntp_json('/alitjp/aj_zhuce.dhtml',{
+			yx:RSAUtils.encryptedString(rsakey, $("#popzhuce input[name='yx']").val()),
+			mm:RSAUtils.encryptedString(rsakey, $("#popzhuce input[name='mm']").val()),
+			qrmm:RSAUtils.encryptedString(rsakey, $("#popzhuce input[name='qrmm']").val()),
+			nc:$("#popzhuce input[name='nc']").val(),//昵称就不加密了吧，单次最多只能加密14个汉字
+			yzm:$("#popzhuce input[name='yzm']").val()
+		},
+		function(){
+			location.reload();
+		},function(data){
+			$.each(data.err, function(idx,obj){
+				var ele = $("#popzhuce input[name='"+obj.zd+"']")
+				tipError(ele, "-1", obj.cw)
+				if (idx==0){ele.focus();}
+				$("#popzhuce .passcode").trigger('click')
+			})
+			if (data.em) layer.msg(data.em)
+		},{clsA:false})
+	}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+	
+	<script src="/alitjp/layer/layer.js"></script>
+	<script src="/alitjp/laypage/laypage.js"></script>
+	<script>
+		laypage({
+			cont : 'fenye',
+			skip : true,
+			groups : 5,
+			pages :1,
+			curr: function(){ //通过url获取当前页，也可以同上（pages）方式获取
+			  var page = location.search.match(/pg=(\d+)/);
+			  return page ? page[1] : 1;
+			}(), 
+			jump : function(e, first) {
+			    if(!first){
+			      location.href = '?pg='+e.curr;
+			    }
+			}
+		})
+
+		function fn_cs(tag){
+			var ecs = $(tag).parent().next();
+			ecs.text(parseInt(ecs.text())+1)
+		}
+
+		$(function() {
+			$(".list>tbody>tr:odd").css("background", "#eaf3f5")
+		})
+	</script>
+</body>
+</html>
+
