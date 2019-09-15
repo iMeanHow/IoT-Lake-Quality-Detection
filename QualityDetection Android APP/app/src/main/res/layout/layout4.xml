@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="#20B2AA"
+        android:textSize="20sp" />
+    <Button
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:src="@drawable/button1"
+        android:text="修改账户信息"
+
+        android:textColor="#0090ff" />
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:src="@drawable/button1"
+        android:text="系统用户管理"
+
+        android:textColor="#0090ff" />
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:src="@drawable/button1"
+
+        android:text="节点管理"
+        android:textColor="#0090ff" />
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:src="@drawable/button1"
+
+        android:text="监测项目管理"
+        android:textColor="#0090ff" />
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="355dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff"
+        android:src="@drawable/button1"
+        android:text="系统设置"
+
+        android:textColor="#0090ff" />
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:text=""
+        android:textSize="20sp" />
+
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:text="最近访问：2018-04-07 22:34"
+        android:textSize="15sp" />
+
+</LinearLayout>
